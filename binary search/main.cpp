@@ -1,11 +1,11 @@
 #include <iostream>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 bool timkiem(int a[],int n,int b)
 {
     int i;
-    for(i=1;i<=n;i++)
+    for(i=0;i<n;i++)
     {
         if(a[i]==b)
             return true;
@@ -13,7 +13,7 @@ bool timkiem(int a[],int n,int b)
          return false;
 }
 
-bool bs(int a[];int n;int b)
+bool bs(int a[],int n,int b)
 {
     int i;
     int left=0,right=n-1;
@@ -22,12 +22,12 @@ bool bs(int a[];int n;int b)
         int m=right-left;
         if(a[m]==b) return true;
         else if(a[m]>b) right=m-1;
-        else (a[m]<b) left=m+1;
+        else  left=m+1;
     }
     return false;
 }
 
-bool binary_search(int a[],int n;int b)
+bool binary_search(int a[],int n,int b)
 {
     int left = 0,right = n-1;
     if (left > right) return false ;
@@ -42,12 +42,15 @@ bool binary_search(int a[],int n;int b)
 
 int main()
 {
-    int a[n],i,n,b;
+    int i,n,b;
     cin>>n>>b;
-    for(int x:a) cin>>x;
+    int a[n];
+    for(i=0;i<n;i++) cin>>a[i];
+    sort(a,a+n);
+    for(int x:a) cout<<x<<" ";
     if(timkiem( a , n , b))
-        cout<<"Founf!"<<endl;
-    else cout<<"Not Found"<<endl;
+        cout<<"Found!"<<endl;
+    else cout<<"Not Found!"<<endl;
     if(bs( a, n, b))
         cout<<"Found!"<<endl;
     else cout<<"Not Found!"<<endl;
