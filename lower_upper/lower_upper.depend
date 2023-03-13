@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1678690407 source:d:\github-tutoral-f2\demo-github\lower_upper\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
