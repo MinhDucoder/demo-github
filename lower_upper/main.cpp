@@ -7,6 +7,8 @@ using namespace std;
 //tra ve vi tri dau tien
 //neu ma tat ca cac phan tu deu nho hon key thi se tra ve =>2
 //upper_bound(iter1,iter2,key) [iter1,iter20 => tra ve phan tu lon hon key
+
+
 int main()
 {
     int i,n;
@@ -28,6 +30,7 @@ int main()
     cout<<"Vi tri can tim la:";
     auto it = lower_bound(v.begin(),v.end(),a);
     cout<<it-v.begin()<<endl;
+    //neu khong co phan tu nao lon hon => iter2
     if(it == v.end()) cout<<"khong co phan tu trong mang"<<endl;
 
     return 0;

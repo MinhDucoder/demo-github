@@ -48,6 +48,7 @@ int main()
     for(i=0;i<n;i++) cin>>a[i];
     sort(a,a+n);
     for(int x:a) cout<<x<<" ";
+    cout<<endl;
     if(timkiem( a , n , b))
         cout<<"Found!"<<endl;
     else cout<<"Not Found!"<<endl;
